@@ -1,9 +1,20 @@
 .container{
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
+    margin-bottom: 50px;
 }
 
-.item{
-    flex: 1;
+.image{
+    object-fit: cover;
+}
+
+.title{
+    margin-bottom: 10px;
+
+}
+
+.desc{
+    font-size: 18px;
+    color: #999
 }
