@@ -1,8 +1,15 @@
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
-    images: {
-      domains: ["images.pexels.com"],
-    },
-  };
-  
-  module.exports = nextConfig;
+  rewrites: async () => {
+    return [
+      // Your route rewrite rules go here
+    ];
+  },
+  images: {
+    domains: ["images.pexels.com"],
+  },
+};
+
+module.exports = nextConfig;

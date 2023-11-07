@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <div className={styles.container} >
       <Link href="/" className={styles.logo}>
-        SJ-APP</Link>
+      SJ Designs</Link>
       <div className={styles.links}>
         {links.map(link =>(
           <Link key={link.id}
