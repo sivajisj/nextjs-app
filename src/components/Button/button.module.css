@@ -1,0 +1,16 @@
+.container {
+    font-size: 24px;
+    padding: 15px 30px;
+    background-color: #3dcd33;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 8px;
+  }
+  
+  .container:hover {
+    background-color: rgb(8, 108, 24); /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+  }
+  
