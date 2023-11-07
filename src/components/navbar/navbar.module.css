@@ -1,0 +1,37 @@
+.container{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+   font-weight: bold;
+   font-size: 22px; 
+   max-width: 200px;
+   transition: color 0.3s ease; /* Smooth transition for text color */
+
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 20px;
+}
+
+.logout {
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: rgb(22, 194, 22);
+    padding: 5px;
+    cursor: pointer; /* Add a pointer cursor on hover for better interaction */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and scale */
+  }
+  
+  /* Add a scale effect on hover for the logout button */
+  .logout:hover {
+    background-color: #333; /* Change the background color on hover */
+    transform: scale(1.1); /* Scale the button slightly on hover */
+  }
