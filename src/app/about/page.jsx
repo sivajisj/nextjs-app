@@ -3,6 +3,12 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Button from "@/components/Button/Button";
 
+export const metadata = {
+  title: 'About Us - Blog App SJ',
+  description: 'Learn more about our blog app and the team behind it.'
+}
+
+
 const About = () => {
   return (
     <div className={styles.container}>
