@@ -3,31 +3,27 @@ import connectDB from "@utils/db"
 import bcrypt from "bcryptjs/dist/bcrypt"
 import { NextResponse } from "next/server"
 
-export const POST = async(request) =>{
-   const {name, email , password} = await request.json()
+export const POST = async (request) => {
+  const { name, email, password } = await request.json();
 
-      await connectDB()
-      const hashedPassword = await bcrypt.hash(password,5)
-      console.log(hashedPassword);
-      const newUser = new User({
-        name,
-        email,
-        password:hashedPassword
-      })
-      try {
+  await connectDB();
 
-        await newUser.save()
-         return new NextResponse("user has been created", {
-            status: 201
-          });
-        
-      } catch (error) {
+  const hashedPassword = await bcrypt.hash(password, 5);
 
-        return new NextResponse("Internal Server Error: Couldn't connect to the database", {
-            status: 500
-          });
-          
-        
-      }
+  const newUser = new User({
+    name,
+    email,
+    password: hashedPassword,
+  });
 
-}
+  try {
+    await newUser.save();
+    return new NextResponse("User has been created", {
+      status: 201,
+    });
+  } catch (err) {
+    return new NextResponse(err.message, {
+      status: 500,
+    });
+  }
+};
