@@ -44,6 +44,7 @@ const Register = () => {
            <button className={styles.button} >Register</button>
       </form>
       {error && "Something went wrong!"}
+     { console.log(error)}
       <Link  href="/dashboard/login">Login with an existing account</Link>
     </div>
   )
