@@ -7,7 +7,7 @@ const postSchema = new Schema({
         type: String,
         required :true
     },
-    des :{
+    desc :{
         type: String,
   
         required :true

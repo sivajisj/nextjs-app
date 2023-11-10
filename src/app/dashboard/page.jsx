@@ -52,7 +52,7 @@ const Dashboard = () => {
   if (session.status === "unauthenticated") {
     router?.push("/dashboard/login");
   }
- console.log(session.data.user)
+//  console.log()
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = e.target[0].value;
@@ -77,12 +77,13 @@ const Dashboard = () => {
       console.log(err);
     }
   };
-  console.log(data);
+  // console.log(data);
 
   const handleDelete = async (id) => {
     try {
       await fetch(`/api/posts/${id}`, {
         method: "DELETE",
+        timeout: 10000
       });
       mutate();
     } catch (err) {
@@ -99,7 +100,8 @@ const Dashboard = () => {
             : data?.map((post) => (
                 <div className={styles.post} key={post._id}>
                   <div className={styles.imgContainer}>
-                    <Image src={post.image} alt="" width={200} height={100} />
+                    <Image src="https://images.pexels.com/photos/19050718/pexels-photo-19050718/free-photo-of-a-close-up-of-a-green-plant-with-a-green-leaf.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="pic" width={200} height={100} />
+                    {console.log(post.image)}
                   </div>
                   <h2 className={styles.postTitle}>{post.title}</h2>
                   <span
@@ -130,3 +132,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+
