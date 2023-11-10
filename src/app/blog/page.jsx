@@ -31,8 +31,11 @@ const Blog = async () => {
               alt=""
               width={400}
               height={250}
+              
+              
               className={styles.image}
             />
+            {console.log(item.image)}
           </div>
           <div className={styles.content}>
             <h1 className={styles.title}>{item.title}</h1>

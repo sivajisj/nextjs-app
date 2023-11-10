@@ -23,3 +23,26 @@ export const GET = async (request,{params}) => {
     );
   }
 };
+
+
+export const DELETE = async (request,{params}) => {
+
+    const {id} = params
+    // console.log(id);
+  try {
+    await connectDB();
+
+    await Post.findByIdAndDelete(id);
+    // console.log(JSON.stringify(posts));
+    return new NextResponse("Post has been deleted ", {
+      status: 200,
+    });
+  } catch (err) {
+    return new NextResponse(
+      "Internal Server Error: Couldn't connect to the database",
+      {
+        status: 500,
+      }
+    );
+  }
+};
