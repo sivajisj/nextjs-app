@@ -1,7 +1,9 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/navbar/Navbar'
-import Footer from '@/components/footer/footer'
+// import Navbar from '@/components/navbar/Navbar'
+// import Footer from '@/components/footer/footer'
+import Footer from '@components/footer/Footer'
+import Navbar from '@components/navbar/Navbar'
 import { ThemeProvider } from '../../context/ThemeContext'
 import AuthProvider from '@components/authProvider/AuthProvider'
 
